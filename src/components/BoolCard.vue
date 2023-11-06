@@ -41,4 +41,58 @@ export default {
     display: block;
     width: 100%;
 }
+
+.heart-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 265px;
+    width: 30px;
+    background-color: white;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
+
+.sale {
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    width: 50px;
+    background-color: red;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.sust {
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    left: 55px;
+    width: 100px;
+    background-color: green;
+    font-size: 20px;
+    color: white;
+}
+
+.price-red {
+    color: red;
+    font-size: 15px;
+}
+
+.price-grey {
+    text-decoration: line-through;
+}
+
+.img-top {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+
+.img-top:hover {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
 </style>

@@ -37,4 +37,28 @@ export default {
 .bg-orange {
     background-color: $headercolor;
 }
+
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
 </style>
