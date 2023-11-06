@@ -18,7 +18,7 @@ export default {
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <BoolCard v-for="i in 3" image-one="" image-two="" />
+                    <BoolCard v-for="i in 6" image-one="" image-two="" />
                 </div>
 
             </div>
