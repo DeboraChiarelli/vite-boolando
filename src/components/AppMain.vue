@@ -8,7 +8,7 @@ export default {
     },
     data() {
         return {
-            products: productsJson.products
+            cards: productsJson.products
         }
     }
 }
@@ -20,7 +20,7 @@ export default {
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <BoolCard v-for="product in products" :key="product.id" :details="product" />
+                    <BoolCard v-for="product in cards" :key="product.id" :details="product" />
                 </div>
 
             </div>

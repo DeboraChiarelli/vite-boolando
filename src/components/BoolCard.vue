@@ -2,9 +2,7 @@
 export default {
     name: 'BoolCard',
     props: {
-        details: Object,
-        
-
+        details: Object
     },
     data() {
         return {
@@ -19,12 +17,11 @@ export default {
         <div class="card">
             <figure class="card-image">
                 <a href="#">
-                    <img :src="details.frontImage" alt="" />
-                    <img :src="details.backImage" class="img-top">
+                    <img :src="`/img/${details.frontImage}`" alt="" />
+                    <img :src="`/img/${details.backImage}`" class="img-top">
                 </a>
                 <span class="heart-icon">&hearts;</span>
-                <span class="sale">-50%</span>
-                <span class="sust">Sostenibilità</span>
+                <span :class="badge.type" v-for="badge in details.badges"> {{ badge.value }}</span>
 
                 <section class="description"> {{ details.brand }}
                 </section>
@@ -55,7 +52,7 @@ export default {
     text-align: center;
 }
 
-.sale {
+.discount {
     display: block;
     position: absolute;
     bottom: 70px;
@@ -66,7 +63,7 @@ export default {
     text-align: center;
 }
 
-.sust {
+.tag {
     display: block;
     position: absolute;
     bottom: 70px;
