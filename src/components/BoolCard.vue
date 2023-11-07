@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'BoolCard',
+    props: {
+        details: Object
+    },
     data() {
         return {
 
@@ -14,18 +17,14 @@ export default {
         <div class="card">
             <figure class="card-image">
                 <a href="#">
-                    <img src="/img/2.webp" alt="" />
-                    <img src="/img/2b.webp" class="img-top">
+                    <img :src="details.frontImage" alt="" />
+                    <img :src="details.backImage" class="img-top">
                 </a>
                 <span class="heart-icon">&hearts;</span>
                 <span class="sale">-50%</span>
                 <span class="sust">Sostenibilità</span>
 
-                <section>
-                    <span>Levi's</span>
-                    <p><strong>RELAXED FIT TEE UNISEX</strong></p>
-                    <span class="price-red">14,99€ </span>
-                    <span class="price-grey">29,99</span>
+                <section class="description"> {{ details.brand }}
                 </section>
             </figure>
         </div>
