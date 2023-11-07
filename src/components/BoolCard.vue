@@ -1,4 +1,6 @@
 <script>
+import { getTransitionRawChildren } from 'vue';
+
 export default {
     name: 'BoolCard',
     props: {
@@ -6,7 +8,12 @@ export default {
     },
     data() {
         return {
-
+        }
+    },
+    methods: {
+        favoriteFunction() {
+            this.details.isInFavorites = !this.details.isInFavorites;
+            console.log(this.details.isInFavorites)
         }
     }
 }
@@ -20,7 +27,8 @@ export default {
                     <img :src="`/img/${details.frontImage}`" alt="" />
                     <img :src="`/img/${details.backImage}`" class="img-top">
                 </a>
-                <span class="heart-icon">&hearts;</span>
+                <span class="heart-icon" @click="favoriteFunction()"
+                    :class="details.isInFavorites === true ? 'red' : ' '">&hearts;</span>
                 <span :class="badge.type" v-for="badge in details.badges"> {{ badge.value }}</span>
                 <div class="details">
                     <section class="description"> {{ details.brand }}
@@ -34,6 +42,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.red {
+    color: red;
+}
+
 .details {
     display: flex;
     flex-direction: column;
@@ -56,7 +68,6 @@ export default {
     width: 30px;
     background-color: white;
     font-size: 25px;
-    color: black;
     text-align: center;
 }
 
