@@ -2,7 +2,9 @@
 export default {
     name: 'BoolCard',
     props: {
-        details: Object
+        details: Object,
+        
+
     },
     data() {
         return {

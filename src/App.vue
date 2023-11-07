@@ -4,6 +4,7 @@ import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import BoolCard from './components/BoolCard.vue';
 
+
 export default {
   components: {
     AppHeader,
