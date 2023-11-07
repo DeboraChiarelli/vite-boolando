@@ -22,15 +22,23 @@ export default {
                 </a>
                 <span class="heart-icon">&hearts;</span>
                 <span :class="badge.type" v-for="badge in details.badges"> {{ badge.value }}</span>
-
-                <section class="description"> {{ details.brand }}
-                </section>
+                <div class="details">
+                    <section class="description"> {{ details.brand }}
+                    </section>
+                    <span> {{ details.name.toUpperCase() }} </span>
+                    <span> {{ details.price }} </span>
+                </div>
             </figure>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
 .card-image {
     position: relative;
 }
