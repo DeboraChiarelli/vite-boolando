@@ -1,7 +1,8 @@
 <script>
 import BoolCard from './BoolCard.vue';
-import productsJson from '../db.json';
+// import productsJson from '../db.json';
 import { store } from '../store';
+
 export default {
     name: "AppMain",
     components: {
