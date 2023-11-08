@@ -4,7 +4,10 @@ import { getTransitionRawChildren } from 'vue';
 export default {
     name: 'BoolCard',
     props: {
-        details: Object
+        details: {
+            type: Object,
+            required: true
+        }
     },
     data() {
         return {
@@ -15,6 +18,9 @@ export default {
             this.details.isInFavorites = !this.details.isInFavorites;
             console.log(this.details.isInFavorites)
         }
+    },
+    created() {
+        console.log('created', this.details)
     }
 }
 </script>

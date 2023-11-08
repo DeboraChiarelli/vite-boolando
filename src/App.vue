@@ -19,7 +19,7 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
-  <BoolCard />
+  <!-- <BoolCard /> -->
 </template>
 
 <style lang="scss">
