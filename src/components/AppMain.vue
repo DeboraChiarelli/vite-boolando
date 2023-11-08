@@ -2,6 +2,7 @@
 import BoolCard from './BoolCard.vue';
 // import productsJson from '../db.json';
 import { store } from '../store';
+import axios from "axios";
 
 export default {
     name: "AppMain",
@@ -12,6 +13,13 @@ export default {
         return {
             store: store,
         }
+    },
+    created() {
+        axios.get("http://localhost:3000/products")
+            .then(res => {
+                // console.log(res.data)
+                this.store.cards = res.data
+            })
     }
 }
 
