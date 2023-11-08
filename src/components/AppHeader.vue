@@ -19,6 +19,7 @@ export default {
                     <a class="white" v-for="menuVoice in menuVoices" href="">
                         {{ menuVoice }}
                     </a>
+                    <input type="text" v-model="store.message">
                 </div>
                 <div class="col">
                     <img src="/img/boolean-logo.png" class="logo" alt="logo Boolean">

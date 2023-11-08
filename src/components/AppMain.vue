@@ -1,6 +1,7 @@
 <script>
 import BoolCard from './BoolCard.vue';
 import productsJson from '../db.json';
+import { store } from '../store';
 export default {
     name: "AppMain",
     components: {
@@ -8,7 +9,7 @@ export default {
     },
     data() {
         return {
-            cards: productsJson.products
+            store: store,
         }
     }
 }
@@ -20,7 +21,7 @@ export default {
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <BoolCard v-for="product in cards" :key="product.id" :details="product" />
+                    <BoolCard v-for="product in store.cards" :key="product.id" :details="product" />
                 </div>
 
             </div>
