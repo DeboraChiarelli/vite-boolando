@@ -18,14 +18,14 @@ export default {
     },
     methods: {
 
-    },
-    showModal(card) {
-        this.selectedCard = card
-        this.open = true
-    },
-    closeModal() {
-        this.open = false
-        this.selectedCard = {}
+        showModal(product) {
+            this.selectedCard = product
+            this.open = true
+        },
+        closeModal() {
+            this.open = false
+            this.selectedCard = {}
+        },
     },
     created() {
         axios.get("http://localhost:3000/products")
