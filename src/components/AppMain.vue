@@ -12,8 +12,15 @@ export default {
     data() {
         return {
             store: store,
+            open: false,
         }
     },
+    methods: {
+
+    },
+    showModal() {
+        
+    }
     created() {
         axios.get("http://localhost:3000/products")
             .then(res => {
@@ -30,7 +37,7 @@ export default {
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <BoolCard v-for="product in store.cards" :key="product.id" :details="product" />
+                    <BoolCard @show="showModal" v-for="product in store.cards" :key="product.id" :details="product" />
                 </div>
 
             </div>

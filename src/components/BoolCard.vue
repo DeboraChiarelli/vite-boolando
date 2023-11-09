@@ -39,7 +39,7 @@ export default {
                 <div class="details">
                     <section class="description"> {{ details.brand }}
                     </section>
-                    <span> {{ details.name.toUpperCase() }} </span>
+                    <span @click="$emit('show', details)"> {{ details.name.toUpperCase() }} </span>
                     <span> {{ details.price }} </span>
                 </div>
             </figure>
